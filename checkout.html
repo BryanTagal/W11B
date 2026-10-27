@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Shop - Checkout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f3f5fa;
+            color: #202943;
+        }
+
+        header {
+            background: #202943;
+            color: white;
+            padding: 22px 6%;
+        }
+
+        header a {
+            color: white;
+        }
+
+        main {
+            padding: 30px 6%;
+        }
+
+        .cart-item {
+            background: white;
+            padding: 18px;
+            margin: 16px 0;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            box-shadow: 0 4px 14px #20294312;
+        }
+
+        .cart-item img {
+            width: 110px;
+            height: 100px;
+            object-fit: contain;
+            background: #f7f8fc;
+            border-radius: 8px;
+        }
+
+        .item-details {
+            flex: 1;
+        }
+
+        .item-details h2 {
+            margin-top: 0;
+        }
+
+        .price {
+            color: #5865f2;
+            font-weight: bold;
+        }
+
+        button {
+            border: 0;
+            border-radius: 8px;
+            padding: 12px 15px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .delete-button {
+            background: #fee2e2;
+            color: #b42318;
+        }
+
+        .clear-button {
+            background: #202943;
+            color: white;
+        }
+
+        .total {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🛒 Your Shopping Cart</h1>
+        <a href="index.html">← Back to Shop</a>
+    </header>
+
+    <main>
+        <div id="cart-items"></div>
+        <p id="empty-message" aria-live="polite"></p>
+        <p id="total" class="total"></p>
+
+        <div class="actions">
+            <button id="clear-cart" class="clear-button">Clear Cart</button>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+    <script src="checkout.js"></script>
+</body>
+</html>
